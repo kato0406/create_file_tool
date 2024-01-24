@@ -74,9 +74,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 15);
+            this.label1.Size = new System.Drawing.Size(136, 15);
             this.label1.TabIndex = 3;
-            this.label1.Text = "フォルダ選択";
+            this.label1.Text = "ファイル作成先の選択";
             // 
             // label2
             // 

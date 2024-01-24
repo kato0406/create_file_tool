@@ -28,7 +28,7 @@ namespace create_file_tool
             {
                 for (int i = 1; i <= numericUpDown1.Value; i++)
                 {
-                    FileInfo fileInfo = new FileInfo($@"{textBox1.Text}\test_{i}.txt");
+                    FileInfo fileInfo = new FileInfo($@"{textBox1.Text}\file_{i}.txt");
                     fileInfo.Create();
                 }
             }
