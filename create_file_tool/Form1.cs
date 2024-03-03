@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace create_file_tool
@@ -13,6 +14,17 @@ namespace create_file_tool
         public Form1()
         {
             InitializeComponent();
+
+            label2.Visible = false;
+            numericUpDown1.Visible = false;
+            label3.Visible = true;
+            textBox2.Visible = true;
+            button3.Visible = true;
+            label4.Visible = false;
+            label5.Visible = false;
+            numericUpDown2.Visible = false;
+            label6.Visible = false;
+            textBox3.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,12 +38,29 @@ namespace create_file_tool
             } 
             else
             {
+                if (textBox1.Text == "" || textBox3.Text == "")
+                {
+                    MessageBox.Show("inputに値が入力されてません。");
+                    return;
+                }
+
+                DateTime dateTime = DateTime.Now;
+                string formatDatetime = dateTime.ToString("yyyyMMddHHmmss");
+                long desiredFileSizeInBytes = (int)numericUpDown2.Value * 1024 * 1024;
+
                 for (int i = 1; i <= numericUpDown1.Value; i++)
                 {
-                    FileInfo fileInfo = new FileInfo($@"{textBox1.Text}\file_{i}.txt");
-                    fileInfo.Create();
+                    FileInfo fileInfo = new FileInfo($@"{textBox1.Text}\{formatDatetime}_{i}.{textBox3.Text}");
+                    
+
+                    using (FileStream fs = fileInfo.Create())
+                    {
+                        fs.SetLength(desiredFileSizeInBytes);
+                    }
                 }
             }
+
+            MessageBox.Show("作成が完了しました。");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -89,6 +118,11 @@ namespace create_file_tool
                 label3.Visible = true;
                 textBox2.Visible = true;
                 button3.Visible = true;
+                label4.Visible = false;
+                label5.Visible = false;
+                numericUpDown2.Visible = false;
+                label6.Visible = false;
+                textBox3.Visible = false;
             } 
             else
             {
@@ -97,6 +131,11 @@ namespace create_file_tool
                 button3.Visible = false;
                 label2.Visible = true;
                 numericUpDown1.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                numericUpDown2.Visible = true;
+                label6.Visible = true;
+                textBox3.Visible = true;
             }
         }
 
