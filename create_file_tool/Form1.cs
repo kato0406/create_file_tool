@@ -15,16 +15,19 @@ namespace create_file_tool
         {
             InitializeComponent();
 
-            label2.Visible = false;
-            numericUpDown1.Visible = false;
-            label3.Visible = true;
-            textBox2.Visible = true;
-            button3.Visible = true;
-            label4.Visible = false;
-            label5.Visible = false;
-            numericUpDown2.Visible = false;
-            label6.Visible = false;
-            textBox3.Visible = false;
+            label3.Visible = false;
+            textBox2.Visible = false;
+            button3.Visible = false;
+            label2.Visible = true;
+            numericUpDown1.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            numericUpDown2.Visible = true;
+            label6.Visible = true;
+            textBox3.Visible = true;
+            radioButton1.Visible = false;
+            radioButton2.Visible = false;
+            radioButton2.Checked = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -141,8 +144,7 @@ namespace create_file_tool
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label2.Visible = false;
-            numericUpDown1.Visible = false;
+            
         }
     }
 }
