@@ -159,18 +159,18 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(15, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(193, 15);
+            this.label4.Size = new System.Drawing.Size(194, 15);
             this.label4.TabIndex = 12;
-            this.label4.Text = "ファイルサイズの指定(メガバイト)";
+            this.label4.Text = "ファイルサイズの指定(キロバイト)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(144, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 15);
+            this.label5.Size = new System.Drawing.Size(26, 15);
             this.label5.TabIndex = 13;
-            this.label5.Text = "MB";
+            this.label5.Text = "KB";
             // 
             // label6
             // 

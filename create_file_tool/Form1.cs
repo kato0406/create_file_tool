@@ -49,7 +49,7 @@ namespace create_file_tool
 
                 DateTime dateTime = DateTime.Now;
                 string formatDatetime = dateTime.ToString("yyyyMMddHHmmss");
-                long desiredFileSizeInBytes = (int)numericUpDown2.Value * 1024 * 1024;
+                long desiredFileSizeInBytes = (int)numericUpDown2.Value * 1024;
 
                 for (int i = 1; i <= numericUpDown1.Value; i++)
                 {
